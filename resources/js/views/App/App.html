@@ -1,0 +1,7 @@
+<div class="home">
+  <h1>Comments</h1>
+  <sort :options="sortOptions" @sort-changed="handleSortChanged" />
+  <comments-list :comments="sortedComments" />
+  <pagination :currentPage="currentPage" :totalPages="totalPages" />
+  <comment-form />
+</div>

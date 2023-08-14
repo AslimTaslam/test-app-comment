@@ -1,0 +1,8 @@
+<div class="comment-card">
+  <div class="comment-card__header">
+    <p class="comment-card__name">{{ comment.name }}</p>
+    <p class="comment-card__date">{{ comment.date }} id: {{ comment.id }}</p>
+  </div>
+  <p class="comment-card__text">{{ comment.text }}</p>
+  <button @click="$emit('deleteComment')" class="comment-card__button">Delete</button>
+</div>

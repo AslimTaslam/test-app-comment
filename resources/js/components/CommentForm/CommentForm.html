@@ -1,0 +1,13 @@
+<div class="comment-form">
+  <h2 class="comment-form__title">Add Comment</h2>
+  <form @submit.prevent="addComment" class="comment-form__form">
+    <label for="username" class="comment-form__label">Username:</label>
+    <input id="username" v-model="username" type="text" required class="comment-form__input">
+    <label for="comment" class="comment-form__label">Comment:</label>
+    <textarea id="comment" v-model="comment" required class="comment-form__textarea"></textarea>
+    <DatePicker id="date" v-model="date" valueType="format" placeholder="Start Date" required
+      class="comment-form__datepicker">
+    </DatePicker>
+    <button type="submit" class="comment-form__button">Submit</button>
+  </form>
+</div>

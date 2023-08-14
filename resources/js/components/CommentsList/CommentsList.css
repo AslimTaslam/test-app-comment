@@ -1,0 +1,25 @@
+.comment-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    justify-content: space-between;
+}
+
+.comment-list li {
+    margin-bottom: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.no-comments {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 154px;
+}
+
+@media screen and (max-width: 768px) {
+    .commentList li {
+        margin-bottom: 10px;
+    }
+}

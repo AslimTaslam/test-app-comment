@@ -1,0 +1,10 @@
+<div class="pagination">
+  <button @click="prevPage" :disabled="currentPage === 1">Prev</button>
+  <div class="page-numbers">
+    <button v-for="pageNumber in pageNumbers" :key="pageNumber" @click="goToPage(pageNumber)"
+      :class="{ active: pageNumber === currentPage }">
+      {{ pageNumber }}
+    </button>
+  </div>
+  <button @click="nextPage" :disabled="currentPage === totalPages">Next</button>
+</div>

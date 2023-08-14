@@ -1,0 +1,11 @@
+<div>
+  <div class="no-comments" v-if="currentPageComments.length === 0">
+    <p>Comments not found. Be the first</p>
+  </div>
+  <ul v-else>
+    <li class="comment-list" v-for="comment of currentPageComments" :key="comment.id">
+      <Comment :comment="comment" @deleteComment="deleteComment(comment.id)" />
+    </li>
+  </ul>
+
+</div>

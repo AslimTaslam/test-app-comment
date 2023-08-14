@@ -1,0 +1,10 @@
+<div class="sort">
+  <p>Sort:</p>
+  <div class="sort-tabs">
+    <div class="sort-tab" :class="{active: sortBy === 'newest'}" @click="sortBy = 'newest'; sortComments()">Newest</div>
+    <div class="sort-tab" :class="{active: sortBy === 'oldest'}" @click="sortBy = 'oldest'; sortComments()">Oldest</div>
+    <div class="sort-tab" :class="{active: sortBy === 'idasc'}" @click="sortBy = 'idasc'; sortComments()">Id asc</div>
+    <div class="sort-tab" :class="{active: sortBy === 'iddesc'}" @click="sortBy = 'iddesc'; sortComments()">Id desc
+    </div>
+  </div>
+</div>
