@@ -50,14 +50,22 @@ const actions = {
   },
   async commentsSorted({ commit, dispatch, state }, sortBy) {
     let sortedComments = [];
-    if (sortBy === "newest") {
-      sortedComments = state.comments.sort((a, b) => new Date(b.date) - new Date(a.date));
-    } else if (sortBy === "oldest") {
-      sortedComments = state.comments.sort((a, b) => new Date(a.date) - new Date(b.date));
-    } else if (sortBy === "idasc") {
-      sortedComments = state.comments.sort((a, b) => a.id - b.id);
-    } else if (sortBy === "iddesc") {
-      sortedComments = state.comments.sort((a, b) => b.id - a.id);
+    switch (sortBy) {
+      case "newest":
+        sortedComments = state.comments.sort((a, b) => new Date(b.date) - new Date(a.date));
+        break;
+      case "oldest":
+        sortedComments = state.comments.sort((a, b) => new Date(a.date) - new Date(b.date));
+        break;
+      case "idasc":
+        sortedComments = state.comments.sort((a, b) => a.id - b.id);
+        break;
+      case "iddesc":
+        sortedComments = state.comments.sort((a, b) => b.id - a.id);
+        break;
+      default:
+        sortedComments = state.comments;
+        break;
     }
     commit("UPDATE_COMMENT", sortedComments);
   },
