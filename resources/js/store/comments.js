@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex';
-import { getComments, createComment, deleteComment } from "../utils/api";
+import { getComments, createComment, deleteComment } from "../apiService/api";
 
 const state = {
   comments: [],
